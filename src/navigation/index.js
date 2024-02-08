@@ -5,6 +5,7 @@ import Home from '../screens/Home';
 import Login from '../screens/Login'; // Corrected import
 import { getLogIn } from '../utils/storageUtils';
 import Form from '../screens/Form';
+import { ActivityIndicator } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,7 +33,7 @@ function AppNavigator() {
   }, []);
 
   if (isLoading) {
-    // You can render a loading indicator here if needed
+    <ActivityIndicator size="large" color="#0000ff" style={{ flex: 1 }} />;
     return null;
   }
 

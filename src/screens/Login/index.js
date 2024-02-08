@@ -3,6 +3,7 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import * as colors from '../../themes/colors';
 import {handleLogin} from '../../utils/storageUtils';
 import CustomTextInput from '../../components/CommanTextInput';
+import { Header } from '../../components/Header';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -13,7 +14,9 @@ const Login = ({navigation}) => {
   };
 
   return (
-    <View style={styles.container}>
+    <>
+      <Header title={'Login'} isLeft={true} />
+      <View style={styles.container}>
       <CustomTextInput
         label="Email"
         value={email}
@@ -32,6 +35,8 @@ const Login = ({navigation}) => {
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
+      </>
+   
   );
 };
 
@@ -45,7 +50,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: colors.PURPLE,
     paddingHorizontal: 20,
-    marginHorizontal : 20
   },
   button: {
     backgroundColor: 'blue',

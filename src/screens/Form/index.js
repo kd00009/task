@@ -14,8 +14,7 @@ import CommanTextInput from '../../components/CommanTextInput';
 import CustomTextInput from '../../components/CommanTextInput';
 
 const Form = ({navigation, route}) => {
-  const {fetchData, updateData} = route.params;
-  const [data, setData] = useState('');
+  const { updateData} = route.params;
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
 

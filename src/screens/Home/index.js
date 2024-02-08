@@ -1,18 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {View, StyleSheet, TouchableOpacity, Text, FlatList, ActivityIndicator} from 'react-native';
 import {Header} from '../../components/Header';
-import {SvgXml} from 'react-native-svg';
-import * as Icons from '../../constants/svg';
 import {SCREENS} from '../../constants/screens';
 import {
   responsiveFontSize,
   responsiveHeight,
   responsiveWidth,
 } from '../../utils/scalingUtils';
-import {addPost, fetchPosts} from '../../utils/fetchData';
+import { fetchPosts} from '../../utils/fetchData';
 import * as Colors from '../../themes/colors';
-import * as Fonts from '../../themes/fonts';
-import axios from 'axios';
 
 const Home = props => {
   const {navigation} = props;
@@ -116,7 +112,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: responsiveFontSize(2),
     fontWeight: '700',
-    fontFamily: Fonts.DMSANS_BOLD,
     color: Colors.PURPLE,
   },
   subText: {
